@@ -10,15 +10,25 @@ terraform {
 }
 
 provider "aws" {
-  region  = "us-west-1"
+  region  = "us-east-1"
 }
 
-resource "aws_instance" "app_server" {
-  ami           = "ami-830c94e3"
+resource "aws_instance" "linux_host" {
+  ami           = "ami-0e2c8caa4b6378d8c"
   instance_type = "t2.micro"
 
   tags = {
-    Name = "ExampleAppServerInstance"
+    Name = "Linux_host"
   }
 }
+
+resource "aws_instance" "windows_host" {
+  ami           = "ami-05b1a50d6798f63cb"
+  instance_type = "t3.micro"
+
+  tags = {
+    Name = "DC01"
+  }
+}
+
 
