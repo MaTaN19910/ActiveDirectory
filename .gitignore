@@ -4,3 +4,5 @@ terraform.tfstate
 .terraform.lock.hcl
 providers
 terraform.tfstate.backup
+linux.pem
+windows.pem
