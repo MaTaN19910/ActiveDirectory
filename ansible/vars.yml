@@ -1,7 +1,7 @@
 ---
 ad_domain_name: rafael.local
-ad_safe_mode_password: <%= ENV['AD_PASSWORD'] %>
+ad_safe_mode_password: "{{ lookup('env', 'AD_PASSWORD') }}"
 ad_admin_user: 'admin'
-ad_admin_password: <%= ENV['AD_PASSWORD'] %>
-user_password: "{{admin_passwd}}"
+ad_admin_password: "{{ lookup('env', 'AD_PASSWORD') }}"
+user_password: "{{ lookup('env', 'AD_PASSWORD') }}"
 default_login_shell: "/bin/bash"

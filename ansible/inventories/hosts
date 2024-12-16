@@ -1,2 +1,12 @@
-[all]
-windows_host ansible_host=3.91.175.232 ansible_user=Administrator ansible_password=d)0?*1@*BFAG0VQ*wud)ooL)odC5@SF0 ansible_port=5986 ansible_connection=winrm ansible_winrm_server_cert_validation=ignore
+[windows]
+
+35.173.232.69
+
+[windows:vars]
+ansible_user=Administrator
+ansible_password='d)0?*1@*BFAG0VQ*wud)ooL)odC5@SF0'
+ansible_connection=winrm
+ansible_winrm_transport=ntlm
+ansible_winrm_schema=https
+ansible_winrm_server_cert_validation=ignore
+ansible_python_interpretor=/usr/bin/python3

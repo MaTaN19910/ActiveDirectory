@@ -6,4 +6,6 @@ providers
 terraform.tfstate.backup
 linux.pem
 windows.pem
-hosts
+ansible/inventories/*
+ansible.cfg
+.ENV

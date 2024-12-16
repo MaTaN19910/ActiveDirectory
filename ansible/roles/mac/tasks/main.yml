@@ -1,0 +1,15 @@
+---
+#Install and configure Microsoft Certification Authority
+#  hosts: windows
+#  tasks:
+- name: Install Active Directory Certificate Services
+  win_feature:
+    name: AD-Certificate
+    state: present
+
+- name: Configure Certification Authority
+  win_shell: |
+    Install-AdcsCertificationAuthority -CAType EnterpriseRootCA -CACommonName "rafael.local" -CryptoProviderName "RSA#Microsoft Software Key Storage Provider" -HashAlgorithm SHA256 -KeyLength 2048 -ValidityPeriod 10 -ValidityPeriodUnits Years
+  args:
+    executable: powershell.exe
+  register: ca_configure
