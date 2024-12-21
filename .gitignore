@@ -9,3 +9,4 @@ windows.pem
 ansible/inventories/*
 ansible.cfg
 .ENV
+hosts
