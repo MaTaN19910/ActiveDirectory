@@ -1,3 +1,4 @@
+<<<<<<< HEAD
 [windows]
 
 35.173.232.69
@@ -10,3 +11,7 @@ ansible_winrm_transport=ntlm
 ansible_winrm_schema=https
 ansible_winrm_server_cert_validation=ignore
 ansible_python_interpretor=/usr/bin/python3
+=======
+[all]
+windows_host ansible_host=3.91.175.232 ansible_user=Administrator ansible_password= ansible_port=5986 ansible_connection=winrm ansible_winrm_server_cert_validation=ignore
+>>>>>>> 10ac9cc5eba7a4bef515a61eac17600cf3c424c7
